@@ -15,7 +15,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
       {/* NOTE: comment in this code when you get to this point in the course */}
 
       {/* <div className="inline-flex">
-        <PaginationArrow
+        <divaginationArrow
           direction="left"
           href={createPageURL(currentPage - 1)}
           isDisabled={currentPage <= 1}
@@ -31,7 +31,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
             if (page === '...') position = 'middle';
 
             return (
-              <PaginationNumber
+              <divaginationNumber
                 key={page}
                 href={createPageURL(page)}
                 page={page}
@@ -42,7 +42,7 @@ export default function Pagination({ totalPages }: { totalPages: number }) {
           })}
         </div>
 
-        <PaginationArrow
+        <divaginationArrow
           direction="right"
           href={createPageURL(currentPage + 1)}
           isDisabled={currentPage >= totalPages}

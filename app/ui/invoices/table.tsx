@@ -33,18 +33,18 @@ export default async function InvoicesTable({
                         height={28}
                         alt={`${invoice.name}'s profile picture`}
                       />
-                      <p>{invoice.name}</p>
+                      <div>{invoice.name}</div>
                     </div>
-                    <p className="text-sm text-gray-500">{invoice.email}</p>
+                    <div className="text-sm text-gray-500">{invoice.email}</div>
                   </div>
                   <InvoiceStatus status={invoice.status} />
                 </div>
                 <div className="flex w-full items-center justify-between pt-4">
                   <div>
-                    <p className="text-xl font-medium">
+                    <div className="text-xl font-medium">
                       {formatCurrency(invoice.amount)}
-                    </p>
-                    <p>{formatDateToLocal(invoice.date)}</p>
+                    </div>
+                    <div>{formatDateToLocal(invoice.date)}</div>
                   </div>
                   <div className="flex justify-end gap-2">
                     <UpdateInvoice id={invoice.id} />
@@ -92,7 +92,7 @@ export default async function InvoicesTable({
                         height={28}
                         alt={`${invoice.name}'s profile picture`}
                       />
-                      <p>{invoice.name}</p>
+                      <div>{invoice.name}</div>
                     </div>
                   </td>
                   <td className="whitespace-nowrap px-3 py-3">
