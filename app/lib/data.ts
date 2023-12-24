@@ -1,3 +1,4 @@
+// 'use store'
 import { sql } from '@vercel/postgres';
 import {
   CustomerField,
@@ -20,16 +21,16 @@ export async function fetchRevenue() {
     // Artificially delay a reponse for demo purposes.
     // Don't do this in real life :)
 
-    // console.log('Fetching revenue data...');
+    console.log('Fetching revenue data...');
     // await new Promise((resolve) => setTimeout(resolve, 3000));
 
     const data = await sql<Revenue>`SELECT * FROM revenue`;
 
-    // console.log('Data fetch complete after 3 seconds.');
+    // console.log(data,'Data fetch complete after 3 seconds.');
 
     return data.rows;
   } catch (error) {
-    console.error('Database Error:', error);
+    console.error('Database Error:--1', error);
     throw new Error('Failed to fetch revenue data.');
   }
 }
